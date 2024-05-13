@@ -42,6 +42,15 @@ public class LoginSystem<T>
                 case State.EnteringPassword:
                     string inputPassword = Console.ReadLine();
 
+                    // Validasi password input
+                    if (string.IsNullOrEmpty(inputPassword))
+                    {
+                        Console.WriteLine("Password tidak boleh kosong. Silakan coba lagi.");
+                        currentState = State.NotLoggedIn;
+                        break;
+                    }
+
+                    // Handle kasus ekstrim untuk username dan password
                     if (currentUsername.Equals(adminAccount.Username.ToString(), StringComparison.OrdinalIgnoreCase))
                     {
                         if (inputPassword == adminAccount.Password)
@@ -78,6 +87,11 @@ public class LoginSystem<T>
                 case State.LoggedIn:
                     Console.WriteLine("Anda sudah masuk.");
                     return;
+
+                default:
+                    Console.WriteLine("Kesalahan: Status tidak valid.");
+                    currentState = State.NotLoggedIn;
+                    break;
             }
         }
     }
