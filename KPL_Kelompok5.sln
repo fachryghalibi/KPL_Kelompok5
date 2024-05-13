@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth", "Auth\Auth.csproj", "{56781B13-675E-42E0-929A-0FB1C27AE381}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationLibrary", "NotificationLibrary\NotificationLibrary.csproj", "{B71A644B-A90D-4402-8598-7578C2C0FF02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{2AA7F1BD-90BA-4C5A-A12D-F22EC3FB3128}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationApp", "NotificationApp\NotificationApp.csproj", "{E74000ED-39C0-49BE-9653-CB0B347C7AD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{56781B13-675E-42E0-929A-0FB1C27AE381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{56781B13-675E-42E0-929A-0FB1C27AE381}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{56781B13-675E-42E0-929A-0FB1C27AE381}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{56781B13-675E-42E0-929A-0FB1C27AE381}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2AA7F1BD-90BA-4C5A-A12D-F22EC3FB3128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2AA7F1BD-90BA-4C5A-A12D-F22EC3FB3128}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2AA7F1BD-90BA-4C5A-A12D-F22EC3FB3128}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2AA7F1BD-90BA-4C5A-A12D-F22EC3FB3128}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B71A644B-A90D-4402-8598-7578C2C0FF02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B71A644B-A90D-4402-8598-7578C2C0FF02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B71A644B-A90D-4402-8598-7578C2C0FF02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B71A644B-A90D-4402-8598-7578C2C0FF02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E74000ED-39C0-49BE-9653-CB0B347C7AD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E74000ED-39C0-49BE-9653-CB0B347C7AD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E74000ED-39C0-49BE-9653-CB0B347C7AD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E74000ED-39C0-49BE-9653-CB0B347C7AD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
