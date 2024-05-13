@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 
 namespace KPL_Kelompok5
 {
@@ -24,41 +25,43 @@ namespace KPL_Kelompok5
             consultationSchedule.Add(DayOfWeek.Monday, new List<string> {
                 "09:00 - 11:00",
                 "14:00 - 16:00",
-                // Tambahkan jadwal konsultasi tambahan di sini jika diperlukan
+                // Tambahkan jadwal konsultasi 
             });
 
             // Selasa
             consultationSchedule.Add(DayOfWeek.Tuesday, new List<string> {
                 "09:00 - 11:00",
                 "14:00 - 16:00",
-                // Tambahkan jadwal konsultasi tambahan di sini jika diperlukan
+                // Tambahkan jadwal konsultasi 
             });
 
             // Rabu
             consultationSchedule.Add(DayOfWeek.Wednesday, new List<string> {
                 "09:00 - 11:00",
                 "14:00 - 16:00",
-                // Tambahkan jadwal konsultasi tambahan di sini jika diperlukan
+                // Tambahkan jadwal konsultasi 
             });
 
             // Kamis
             consultationSchedule.Add(DayOfWeek.Thursday, new List<string> {
                 "09:00 - 11:00",
                 "14:00 - 16:00",
-                // Tambahkan jadwal konsultasi tambahan di sini jika diperlukan
+                // Tambahkan jadwal konsultasi 
             });
 
             // Jumat
             consultationSchedule.Add(DayOfWeek.Friday, new List<string> {
                 "09:00 - 11:00",
                 "14:00 - 16:00",
-                // Tambahkan jadwal konsultasi tambahan di sini jika diperlukan
+                // Tambahkan jadwal konsultasi 
             });
         }
 
         // Method untuk mendapatkan jadwal konsultasi kesehatan berdasarkan hari
         public List<string> GetConsultationSchedule(DayOfWeek day)
         {
+            Contract.Requires(Enum.IsDefined(typeof(DayOfWeek), day));
+            Contract.Ensures(Contract.Result<List<string>>() != null);
             // Mengambil jadwal konsultasi dari tabel berdasarkan hari yang diberikan
             if (consultationSchedule.ContainsKey(day))
             {

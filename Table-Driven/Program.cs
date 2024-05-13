@@ -30,7 +30,7 @@ namespace KPL_Kelompok5
 
                     // Meminta pengguna untuk memilih jam dari jadwal konsultasi yang tersedia
                     Console.WriteLine("Pilih jam konsultasi (misal: 09:00):");
-                    string inputTime = Console.ReadLine().Trim(); // Menghapus spasi ekstra dari input
+                    string inputTime = Console.ReadLine().Trim(); 
 
                     // Memeriksa apakah jam yang dipilih tersedia di jadwal konsultasi
                     bool isTimeAvailable = IsTimeAvailable(scheduleList, inputTime);
