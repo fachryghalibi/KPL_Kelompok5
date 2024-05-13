@@ -1,0 +1,6 @@
+@APITelkomMedika_HostAddress = http://localhost:5168
+
+GET {{APITelkomMedika_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
