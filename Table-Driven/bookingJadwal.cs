@@ -19,7 +19,7 @@ namespace KPL_Kelompok5
         private void InitializeConsultationSchedule()
         {
             // Tabel ini mencantumkan hari dan waktu konsultasi untuk setiap hari dalam seminggu
-            // Anda dapat menyesuaikan jadwal konsultasi sesuai kebutuhan
+            // dapat menyesuaikan jadwal konsultasi sesuai kebutuhan
 
             // Senin
             consultationSchedule.Add(DayOfWeek.Monday, new List<string> {
@@ -60,6 +60,7 @@ namespace KPL_Kelompok5
         // Method untuk mendapatkan jadwal konsultasi kesehatan berdasarkan hari
         public List<string> GetConsultationSchedule(DayOfWeek day)
         {
+            // Desain by contract
             Contract.Requires(Enum.IsDefined(typeof(DayOfWeek), day));
             Contract.Ensures(Contract.Result<List<string>>() != null);
             // Mengambil jadwal konsultasi dari tabel berdasarkan hari yang diberikan
