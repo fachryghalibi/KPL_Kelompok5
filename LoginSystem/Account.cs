@@ -1,17 +1,11 @@
 ﻿using System;
+using System.Linq;
 
 public class Account<T>
 {
     public T Username { get; }
     public string Password { get; }
 
-    // Prasyarat:
-    // 1. Username tidak boleh null atau kosong.
-    // 2. Username harus memiliki panjang minimal 8 dan maksimal 12 karakter.
-    // 3. Username tidak boleh sama dengan username lain yang sudah ada.
-    // 4. Password tidak boleh null atau kosong.
-    // 5. Password harus memiliki setidaknya satu huruf besar, satu huruf kecil, dan satu angka.
-    // 6. Password harus memiliki panjang minimal 8 dan maksimal 12 karakter.
     public Account(T username, string password)
     {
         if (string.IsNullOrEmpty(username.ToString()))
@@ -35,6 +29,7 @@ public class Account<T>
 
     private bool IsUniqueUsername(T username)
     {
+        // Implementasi pengecekan unik
         return true;
     }
 

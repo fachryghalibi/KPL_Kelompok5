@@ -14,6 +14,7 @@ public class LoginSystem<T>
     private Account<T> adminAccount;
     private Account<T> userAccount;
     private string currentUsername;
+    private bool isAdminLoggedIn = false;
 
     public LoginSystem(Account<T> admin, Account<T> user)
     {
@@ -21,78 +22,110 @@ public class LoginSystem<T>
         userAccount = user;
     }
 
+    public void SetUserAccount(Account<T> user)
+    {
+        userAccount = user;
+    }
+
+    public void SetAdminAccount(Account<T> admin)
+    {
+        adminAccount = admin;
+    }
+
+    public void UpdateAdminAccount(Account<T> newAdmin)
+    {
+        adminAccount = newAdmin;
+    }
+
     public void StartLogin()
     {
         while (true)
         {
-            switch (currentState)
+            try
             {
-                case State.NotLoggedIn:
-                    Console.WriteLine("Silakan masukkan username:");
-                    currentState = State.EnteringUsername;
-                    break;
-
-                case State.EnteringUsername:
-                    string inputUsername = Console.ReadLine();
-                    currentUsername = inputUsername;
-                    Console.WriteLine("Silakan masukkan password:");
-                    currentState = State.EnteringPassword;
-                    break;
-
-                case State.EnteringPassword:
-                    string inputPassword = Console.ReadLine();
-
-                    // Validasi password input
-                    if (string.IsNullOrEmpty(inputPassword))
-                    {
-                        Console.WriteLine("Password tidak boleh kosong. Silakan coba lagi.");
-                        currentState = State.NotLoggedIn;
+                switch (currentState)
+                {
+                    case State.NotLoggedIn:
+                        Console.WriteLine("Silakan masukkan username:");
+                        currentState = State.EnteringUsername;
                         break;
-                    }
 
-                    // Handle kasus ekstrim untuk username dan password
-                    if (currentUsername.Equals(adminAccount.Username.ToString(), StringComparison.OrdinalIgnoreCase))
-                    {
-                        if (inputPassword == adminAccount.Password)
+                    case State.EnteringUsername:
+                        string inputUsername = Console.ReadLine();
+                        currentUsername = inputUsername;
+                        Console.WriteLine("Silakan masukkan password:");
+                        currentState = State.EnteringPassword;
+                        break;
+
+                    case State.EnteringPassword:
+                        string inputPassword = Console.ReadLine();
+
+                        if (string.IsNullOrEmpty(inputPassword))
                         {
-                            Console.WriteLine("Admin berhasil login.");
-                            currentState = State.LoggedIn;
+                            throw new ArgumentException("Password tidak boleh kosong.");
+                        }
+
+                        if (currentUsername.Equals(adminAccount.Username.ToString(), StringComparison.OrdinalIgnoreCase))
+                        {
+                            if (inputPassword == adminAccount.Password)
+                            {
+                                Console.WriteLine("Admin berhasil login.");
+                                currentState = State.LoggedIn;
+                                isAdminLoggedIn = true;
+                            }
+                            else
+                            {
+                                throw new ArgumentException("Password salah.");
+                            }
+                        }
+                        else if (userAccount != null && currentUsername.Equals(userAccount.Username.ToString(), StringComparison.OrdinalIgnoreCase))
+                        {
+                            if (inputPassword == userAccount.Password)
+                            {
+                                Console.WriteLine("User berhasil login.");
+                                currentState = State.LoggedIn;
+                                isAdminLoggedIn = false;
+                            }
+                            else
+                            {
+                                throw new ArgumentException("Password salah.");
+                            }
                         }
                         else
                         {
-                            Console.WriteLine("Password salah. Silakan coba lagi.");
-                            currentState = State.NotLoggedIn;
+                            throw new ArgumentException("Username tidak valid.");
                         }
-                    }
-                    else if (currentUsername.Equals(userAccount.Username.ToString(), StringComparison.OrdinalIgnoreCase))
-                    {
-                        if (inputPassword == userAccount.Password)
-                        {
-                            Console.WriteLine("User berhasil login.");
-                            currentState = State.LoggedIn;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Password salah. Silakan coba lagi.");
-                            currentState = State.NotLoggedIn;
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("Username tidak valid.");
-                        currentState = State.NotLoggedIn;
-                    }
-                    break;
+                        break;
 
-                case State.LoggedIn:
-                    Console.WriteLine("Anda sudah masuk.");
-                    return;
+                    case State.LoggedIn:
+                        Console.WriteLine("Anda sudah masuk.");
+                        return;
 
-                default:
-                    Console.WriteLine("Kesalahan: Status tidak valid.");
-                    currentState = State.NotLoggedIn;
-                    break;
+                    default:
+                        throw new InvalidOperationException("Status tidak valid.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Login gagal: {ex.Message}");
+                currentState = State.NotLoggedIn;
             }
         }
+    }
+
+    public void Logout()
+    {
+        currentState = State.NotLoggedIn;
+        isAdminLoggedIn = false;
+    }
+
+    public bool IsLoggedIn()
+    {
+        return currentState == State.LoggedIn;
+    }
+
+    public bool IsAdminLoggedIn()
+    {
+        return isAdminLoggedIn;
     }
 }
