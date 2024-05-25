@@ -112,6 +112,7 @@ public class LoginSystem<T>
             }
         }
     }
+<<<<<<< HEAD
 
     public void Logout()
     {
@@ -129,3 +130,6 @@ public class LoginSystem<T>
         return isAdminLoggedIn;
     }
 }
+=======
+}
+>>>>>>> origin/IhsanMaulana
