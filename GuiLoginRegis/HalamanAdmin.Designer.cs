@@ -79,6 +79,7 @@
             this.BookingJadwalTable.Name = "BookingJadwalTable";
             this.BookingJadwalTable.Size = new System.Drawing.Size(393, 184);
             this.BookingJadwalTable.TabIndex = 20;
+            this.BookingJadwalTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BookingJadwalTable_CellContentClick);
             // 
             // HalamanAdmin
             // 

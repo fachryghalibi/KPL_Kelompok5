@@ -113,6 +113,7 @@
             this.KirimButton.TabIndex = 7;
             this.KirimButton.Text = "KIRIM";
             this.KirimButton.UseVisualStyleBackColor = true;
+            this.KirimButton.Click += new System.EventHandler(this.KirimButton_Click);
             // 
             // NamaBox
             // 
@@ -120,6 +121,7 @@
             this.NamaBox.Name = "NamaBox";
             this.NamaBox.Size = new System.Drawing.Size(332, 20);
             this.NamaBox.TabIndex = 8;
+            this.NamaBox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.NamaBox_MaskInputRejected);
             // 
             // HariBox
             // 
@@ -127,6 +129,7 @@
             this.HariBox.Name = "HariBox";
             this.HariBox.Size = new System.Drawing.Size(332, 20);
             this.HariBox.TabIndex = 9;
+            this.HariBox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.HariBox_MaskInputRejected);
             // 
             // TanggalBox
             // 
@@ -134,6 +137,7 @@
             this.TanggalBox.Name = "TanggalBox";
             this.TanggalBox.Size = new System.Drawing.Size(332, 20);
             this.TanggalBox.TabIndex = 10;
+            this.TanggalBox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.TanggalBox_MaskInputRejected);
             // 
             // JamBox
             // 
@@ -141,6 +145,7 @@
             this.JamBox.Name = "JamBox";
             this.JamBox.Size = new System.Drawing.Size(332, 20);
             this.JamBox.TabIndex = 11;
+            this.JamBox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.JamBox_MaskInputRejected);
             // 
             // HalamanUser
             // 
