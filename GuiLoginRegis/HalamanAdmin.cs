@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GuiLoginRegis
 {
-    public partial class Regis : Form
+    public partial class HalamanAdmin : Form
     {
-        public Regis()
+        public HalamanAdmin()
         {
             InitializeComponent();
         }

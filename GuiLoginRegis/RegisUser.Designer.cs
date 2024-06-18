@@ -1,6 +1,6 @@
 ﻿namespace GuiLoginRegis
 {
-    partial class Regis
+    partial class RegisUser
     {
         /// <summary>
         /// Required designer variable.
@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.NameBox = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.EmailBox = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.UsernameBox = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.PasswordBox = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.RegisterButton = new System.Windows.Forms.Button();
+            this.CancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -50,12 +50,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "TELKOM MEDIKA REGISTER PAGE";
             // 
-            // maskedTextBox1
+            // NameBox
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(50, 88);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(346, 20);
-            this.maskedTextBox1.TabIndex = 1;
+            this.NameBox.Location = new System.Drawing.Point(50, 88);
+            this.NameBox.Name = "NameBox";
+            this.NameBox.Size = new System.Drawing.Size(346, 20);
+            this.NameBox.TabIndex = 1;
             // 
             // label2
             // 
@@ -66,12 +66,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Name";
             // 
-            // maskedTextBox2
+            // EmailBox
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(50, 158);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(346, 20);
-            this.maskedTextBox2.TabIndex = 3;
+            this.EmailBox.Location = new System.Drawing.Point(50, 158);
+            this.EmailBox.Name = "EmailBox";
+            this.EmailBox.Size = new System.Drawing.Size(346, 20);
+            this.EmailBox.TabIndex = 3;
             // 
             // label3
             // 
@@ -82,12 +82,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Email";
             // 
-            // maskedTextBox3
+            // UsernameBox
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(50, 230);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(346, 20);
-            this.maskedTextBox3.TabIndex = 5;
+            this.UsernameBox.Location = new System.Drawing.Point(50, 230);
+            this.UsernameBox.Name = "UsernameBox";
+            this.UsernameBox.Size = new System.Drawing.Size(346, 20);
+            this.UsernameBox.TabIndex = 5;
             // 
             // label4
             // 
@@ -98,12 +98,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Username";
             // 
-            // maskedTextBox4
+            // PasswordBox
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(50, 304);
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(346, 20);
-            this.maskedTextBox4.TabIndex = 7;
+            this.PasswordBox.Location = new System.Drawing.Point(50, 304);
+            this.PasswordBox.Name = "PasswordBox";
+            this.PasswordBox.Size = new System.Drawing.Size(346, 20);
+            this.PasswordBox.TabIndex = 7;
             // 
             // label5
             // 
@@ -114,42 +114,42 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Password";
             // 
-            // button1
+            // RegisterButton
             // 
-            this.button1.Location = new System.Drawing.Point(321, 365);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "REGISTER";
-            this.button1.UseVisualStyleBackColor = true;
+            this.RegisterButton.Location = new System.Drawing.Point(321, 365);
+            this.RegisterButton.Name = "RegisterButton";
+            this.RegisterButton.Size = new System.Drawing.Size(75, 23);
+            this.RegisterButton.TabIndex = 9;
+            this.RegisterButton.Text = "REGISTER";
+            this.RegisterButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // CancelButton
             // 
-            this.button2.Location = new System.Drawing.Point(50, 365);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "CANCEL";
-            this.button2.UseVisualStyleBackColor = true;
+            this.CancelButton.Location = new System.Drawing.Point(50, 365);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(75, 23);
+            this.CancelButton.TabIndex = 10;
+            this.CancelButton.Text = "CANCEL";
+            this.CancelButton.UseVisualStyleBackColor = true;
             // 
-            // Regis
+            // RegisUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 420);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.maskedTextBox4);
+            this.Controls.Add(this.PasswordBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.UsernameBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.EmailBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.NameBox);
             this.Controls.Add(this.label1);
-            this.Name = "Regis";
-            this.Text = "Regis";
+            this.Name = "RegisUser";
+            this.Text = "RegisterUser";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,15 +158,15 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox NameBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox EmailBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox UsernameBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.MaskedTextBox PasswordBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button RegisterButton;
+        private System.Windows.Forms.Button CancelButton;
     }
 }

@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Table-Driven", "Table-Drive
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APITelkomMedika", "APITelkomMedika\APITelkomMedika.csproj", "{50129CFD-4E8D-4D97-AB69-F517F8A4A99D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiLoginRegis", "GuiLoginRegis\GuiLoginRegis.csproj", "{CD77261E-6D66-4025-8C14-B239D7FC2F6A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GuiLoginRegis\GUI.csproj", "{CD77261E-6D66-4025-8C14-B239D7FC2F6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
