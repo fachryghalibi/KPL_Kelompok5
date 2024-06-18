@@ -8,6 +8,8 @@ namespace LoginSystem
         {
             EnteringUsername,
             EnteringPassword,
+            EnteringName,
+            EnteringEmail,
             Completed
         }
 
@@ -22,6 +24,8 @@ namespace LoginSystem
         {
             T username = default(T);
             string password = null;
+            string name = null;
+            string email = null;
 
             while (true)
             {
@@ -38,11 +42,23 @@ namespace LoginSystem
                         case State.EnteringPassword:
                             Console.WriteLine("Masukkan password admin:");
                             password = Console.ReadLine();
+                            currentState = State.EnteringName;
+                            break;
+
+                        case State.EnteringName:
+                            Console.WriteLine("Masukkan nama admin:");
+                            name = Console.ReadLine();
+                            currentState = State.EnteringEmail;
+                            break;
+
+                        case State.EnteringEmail:
+                            Console.WriteLine("Masukkan email admin:");
+                            email = Console.ReadLine();
                             currentState = State.Completed;
                             break;
 
                         case State.Completed:
-                            adminAccount = new Account<T>(username, password);
+                            adminAccount = new Account<T>(username, password, name, email);
                             Console.WriteLine("Akun admin berhasil didaftarkan.");
                             return adminAccount;
 

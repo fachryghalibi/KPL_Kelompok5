@@ -1,6 +1,4 @@
-﻿using System;
-
-public class LoginSystem<T>
+﻿public class LoginSystem<T>
 {
     private enum State
     {
@@ -112,7 +110,6 @@ public class LoginSystem<T>
             }
         }
     }
-<<<<<<< HEAD
 
     public void Logout()
     {
@@ -130,6 +127,3 @@ public class LoginSystem<T>
         return isAdminLoggedIn;
     }
 }
-=======
-}
->>>>>>> origin/IhsanMaulana
